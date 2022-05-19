@@ -3,12 +3,14 @@ package com.bridge.day4;
 public class SnakeLadder {
     public static void main(String[] args) {
         int player_position = 0;
+        int count = 0;
         int[] ladder = {2, 12, 33, 48, 85};
         int[] ladder_position = {14, 42, 68, 83, 95};
         int[] snake = {15, 38, 53, 69, 97};
         int[] bite_position = {4, 17, 54, 63, 16};
         while (player_position <= 100) {
             int dice = (int) ((Math.random() * 10) % 6) + 1;
+            count++;
             System.out.println("dice number " + " " + dice);
             System.out.println("player position is " + " " + player_position);
             if (dice != 0) {
@@ -34,5 +36,6 @@ public class SnakeLadder {
                 }
             }
         }
+        System.out.println("number of times the dice was played" + " " + count);
     }
 }
