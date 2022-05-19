@@ -14,6 +14,10 @@ public class SnakeLadder {
             if (dice != 0) {
                 player_position = player_position + dice;
                 System.out.println("After dice roll player position is " + " " + player_position);
+                if(player_position > 100) {
+                    player_position = player_position - dice;
+                    System.out.println("player_position is" + " " + player_position);
+                }
                 if (player_position == 100) {
                     System.out.println("player gets winning position" + " " + player_position);
                     break;
